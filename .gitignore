@@ -40,4 +40,4 @@ dist/
 
 
 /go2_middle_layer/
-go2_middle_layer/
+go2_middle_layer/.env
