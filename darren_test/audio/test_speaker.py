@@ -40,13 +40,16 @@ import sounddevice as sd
 import soundfile as sf
 
 
-print(sd.query_devices())
+print("List of available devices: ", sd.query_devices())
 
-sd.default.device = 0
+sd.default.device = 1
 sd.default.latency = "high"
 sd.default.blocksize = 2048
 
+print("List of available devices: ", sd.query_devices())
+
+
 data, sr = sf.read("tts_48k.wav", dtype="int16")
 
-sd.play(data, 48000)
+sd.play(data, 24000)
 sd.wait()

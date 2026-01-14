@@ -55,12 +55,12 @@ class UserInterface:
         print("No matching test option found.")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        interface = "eth0"
-    else:
-        interface = sys.argv[1]
 
-    ChannelFactoryInitialize(0, interface)
+
+    print("WARNING: Please ensure there are no obstacles around the robot while running this example.")
+    input("Press Enter to continue...")
+
+    ChannelFactoryInitialize(0, "eth0")
 
     test_option = TestOption(name=None, id=None) 
     user_interface = UserInterface()
